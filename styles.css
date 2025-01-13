@@ -6,12 +6,83 @@
     height: 700px; 
     padding-top: 26px; 
     background-image: url("./images/1920.jpg");
+    background-size: auto 100%;
     padding-left: 72px;
 }
+.header-content {
+    width: 542px;
+}
+.logo {
+    background-image: url("./images/logo.png");
+    height: 36px;
+    width: 245.17px;
+    margin-bottom: 62px;
+}
+.text {
+    font-family: "Golos Text", serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-size: 18px;
+    text-align: center;
+    margin-top: 24px;
+    margin-bottom: 40px;
+}
+.buttons-container {
+    display: flex;
+    font-size: 16px;
+    font-family: "Golos Text", serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    text-align: center;
+}
+.button {
+    width: 542px;
+    height: 82px;
+    font-size: 16px;
+    text-align: center;
+    padding: 20px 49px;
+    border-radius: 66px;
+}
+
+.button.left {
+    background-color: #1F1F1F;
+    color: #FFFFFF;
+    margin-left: 16px;
+    border: none;
+}
+.button.right {
+    background: none 0;
+    color: #1F1F1F;
+    margin-left: 16px;
+    border: 2px solid #1F1F1F;
+}
+
+.content {
+    overflow: hidden;
+}
+.running-line {
+    font-family: "Merriweather", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 22px;
+    background-color: #F54932;
+    color: #FFFFFF;
+    padding: 18px 12px;
+    animation: text 4s infinite linear;
+    white-space: nowrap;
+    width: fit-content;
+}
+@keyframes text {
+    0%{
+      transform: translate(0, 0);
+    }
+    100%{
+      transform: translate(-45%, 0);
+    }
+  }
 .title {
     color: #313131;
     font-size: 60px;
-    width: 542px;
     line-height: 110%;
     font-family: "Merriweather", serif;
     font-weight: 400;
@@ -23,9 +94,9 @@
         text-align: end;
     };
 }
-@media (min-width: 1920px) {
+/* @media (min-width: 1920px) {
     .header {
        
     }
 
-}
+} */
