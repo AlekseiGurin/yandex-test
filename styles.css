@@ -1,0 +1,31 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+.header {
+    height: 700px; 
+    padding-top: 26px; 
+    background-image: url("./images/1920.jpg");
+    padding-left: 72px;
+}
+.title {
+    color: #313131;
+    font-size: 60px;
+    width: 542px;
+    line-height: 110%;
+    font-family: "Merriweather", serif;
+    font-weight: 400;
+    font-style: normal;
+    .third-string {
+      text-align: center;
+    };
+    .fourth-string {
+        text-align: end;
+    };
+}
+@media (min-width: 1920px) {
+    .header {
+       
+    }
+
+}
