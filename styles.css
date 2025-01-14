@@ -1,3 +1,8 @@
+:root {
+    --main-text-color: #1F1F1F; 
+    --color-text: #F54932;
+  }
+
 * {
     margin: 0;
     padding: 0;
@@ -18,9 +23,8 @@
     width: 245.17px;
     margin-bottom: 62px;
 }
-.text {
+.header-text {
     font-family: "Golos Text", serif;
-    font-optical-sizing: auto;
     font-style: normal;
     font-size: 18px;
     text-align: center;
@@ -31,7 +35,6 @@
     display: flex;
     font-size: 16px;
     font-family: "Golos Text", serif;
-    font-optical-sizing: auto;
     font-style: normal;
     text-align: center;
 }
@@ -42,6 +45,7 @@
     text-align: center;
     padding: 20px 49px;
     border-radius: 66px;
+    cursor: pointer;
 }
 
 .button.left {
@@ -50,15 +54,24 @@
     margin-left: 16px;
     border: none;
 }
+.button.left:hover {
+    background-color: #FBCE51;
+    color: var(--main-text-color);
+}
+.button.right:hover {
+    background-color: #1F1F1F;
+    color: #FFFFFF;
+}
 .button.right {
     background: none 0;
-    color: #1F1F1F;
+    color: var(--main-text-color);
     margin-left: 16px;
     border: 2px solid #1F1F1F;
 }
-
 .content {
     overflow: hidden;
+    background-color: #FFFFFF;
+    padding: 0 72px 0 72px;
 }
 .running-line {
     font-family: "Merriweather", serif;
@@ -68,11 +81,12 @@
     background-color: #F54932;
     color: #FFFFFF;
     padding: 18px 12px;
-    animation: text 4s infinite linear;
+    animation: running-line 4s infinite linear;
     white-space: nowrap;
     width: fit-content;
+    text-transform: uppercase;
 }
-@keyframes text {
+@keyframes running-line {
     0%{
       transform: translate(0, 0);
     }
@@ -81,7 +95,7 @@
     }
   }
 .title {
-    color: #313131;
+    color: var(--main-text-color);
     font-size: 60px;
     line-height: 110%;
     font-family: "Merriweather", serif;
@@ -94,9 +108,139 @@
         text-align: end;
     };
 }
-/* @media (min-width: 1920px) {
-    .header {
-       
-    }
+.content-header {
+    display: flex;
+    margin-top: 80px;
+    justify-content: space-between;
+    align-items: center;
+}
 
-} */
+.content-header-text, .schedule-header {
+    color: var(--main-text-color);
+    font-size: 36px;
+    line-height: 135%;
+    font-family: "Merriweather", serif;
+    font-weight: 400;
+    font-style: normal;
+    text-transform: uppercase;
+}
+.color-text {
+    color: var(--color-text);
+}
+.content-header-image {
+    width: 394px;
+    height: 250px;
+    background-image: url("./images/chessPlayers.png");
+}
+
+.schedule-content {
+  display: flex;
+  margin-top: 64px;
+  margin-bottom: 200px;
+  justify-content: space-between;
+}
+
+a {
+    text-decoration: none;
+    color: #3057A2;
+}
+
+.schedule-content-image {
+    background-image: url("./images/chessPlayer.png");
+    width: 528.99px;
+    height: 670.21px;
+    background-size: 100% 100%;
+}
+.schedule-header {
+    margin-bottom: 60px;
+}
+.schedule {
+    display: flex;
+    font-size: 20px;
+    font-family: "Golos Text", serif;
+    font-weight: bold;
+    color: var(--main-text-color);
+    border-spacing: 0;
+    margin-bottom: 48px;
+}
+.left-column {
+    opacity: 0.7;
+    font-weight: normal;
+}
+td {
+    border: 2px solid #D0D0D0;
+    border-bottom: none;
+    padding-bottom: 16px;
+    padding-top: 16px;
+}
+.schedule tr:first-child td {
+    border-top: none;
+    padding-top: 0;
+}
+.schedule tr:last-child td {
+    padding-bottom: 0;
+}
+.schedule td:last-child {
+    border-right: none;
+    border-left: none;
+    padding-left: 16px;
+    padding-bottom: 16px;
+}
+.schedule td:first-child {
+    border-left: none;
+    padding-right: 16px;
+}
+del {
+	text-decoration-color: #F54932;
+    margin-right: 14.5px;
+}
+
+.midle-content {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: auto auto auto;
+    margin-bottom: 200px;
+}
+
+.midle-content-title {
+    color: var(--main-text-color);
+    font-size: 54px;
+    line-height: 135%;
+    font-family: "Merriweather", serif;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+.midle-content-title .littel-text {
+    color: #3057A2;
+    font-size: 20px;
+    font-family: "Golos Text", serif;
+    line-height: normal;
+    align-content: center;
+    margin-left: 10px;
+}
+.midle-content-title .second-row {
+    display: flex;
+}
+
+.midle-content .midle-content-card {
+    background-image: url("./images/card-background.jpg");
+    padding: 20px;
+    display: flex;
+}
+.midle-content .card-number {
+    background-color: #FFFFFF;
+    width: 36px;
+    height: 36px;
+    border-radius: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 16px;
+}
+
+@media (min-width: 1920px) {
+    .header {
+        padding-left: 348.5px;
+    }
+}
