@@ -25,8 +25,8 @@
             </div>
             <div class="header-text">Оплатите взнос на телеграммы для организации Международного васюкинского турнира по шахматам</div>
             <div class="buttons-container">
-                <button class="button left">Поддержать шахматную мысль</button>
-                <button class="button right">Подробнее <br>о турнире</button>
+                <a href="#supportTheChessIdea" class="button left">Поддержать шахматную мысль</a>
+                <a href="#moreAboutTheTournament" class="button right">Подробнее <br>о турнире</a>
             </div>
         </div>
     </div>
@@ -37,7 +37,7 @@
             <span>Лед тронулся, господа присяжные заседатели! &#8226;</span>
         </div>
         <div class="content-header">
-            <div class="content-header-text">
+            <div id="supportTheChessIdea" class="content-header-text">
                 Чтобы поддержать<br>Международный васюкинский<br>турнир посетите лекцию на тему:<br><span class="color-text">«Плодотворная дебютная идея»</span>
             </div>
             <div class="content-header-image"></div>
@@ -48,7 +48,7 @@
             <div class="schedule-header">
                 И Сеанс <span class="color-text">одновременной игры<br> в шахматы на 160 досках</span><br> гроссмейстера О. Бендера
             </div>
-            <table class="schedule">
+            <table id="moreAboutTheTournament" class="schedule">
                 <tr>
                     <td class="left-column">Место проведения:</td>
                     <td>Клуб «Картонажник»</td>
@@ -77,56 +77,122 @@
             <div>Этапы преображения</div>
             <div class="second-row">Васюков<div class="littel-text">Будущие источники<br> обогащения васюкинцев</div></div>
         </div>
-        <div class="midle-content">
-            <div class="midle-content-card">
-                <div class="card-number">
-                    1
+        <div class="midle-content-container">
+            <div class="midle-content">
+                <div class="midle-content-card box-1">
+                    <div class="card-number">
+                        1
+                    </div>
+                    <div class="card-content">
+                        Строительствоbr железнодорожной магистрали Москва-Васюки
+                    </div>
                 </div>
-                <div class="card-content">
-                    Строительство железнодорожной магистрали Москва-Васюки
+                <div class="midle-content-card box-2">
+                    <div class="card-number">
+                        2
+                    </div>
+                    <div class="card-content">
+                        Открытие фешенебельной гостиницы «Проходная пешка» и других небоскрёбов
+                    </div>
+                </div>
+                <div class="midle-content-card box-3">
+                    <div class="card-number">
+                        3
+                    </div>
+                    <div class="card-content">
+                        Поднятие сельского хозяйства в радиусе на тысячу километров: производство овощей, фруктов, икры, шоколадных конфет
+                    </div>
+                </div>
+                <div class="midle-content-card box-4">
+                    <div class="card-number">
+                        4
+                    </div>
+                    <div class="card-content">
+                        Строительство дворца для турнира
+                    </div>
+                </div>
+                <div class="midle-content-card box-5">
+                    <div class="card-number">
+                        5
+                    </div>
+                    <div class="card-content">
+                        Размещение гаражей для гостевого автотранспорта
+                    </div>
+                </div>
+                <div class="midle-content-card box-6">
+                    <div class="card-number">
+                        6
+                    </div>
+                    <div class="card-content">
+                        Постройка сверхмощной радиостанции для передачи всему миру сенсационных результатов
+                    </div>
+                </div>
+                <div class="midle-content-card box-7">
+                    <div class="card-number">
+                        7
+                    </div>
+                    <div class="card-content">
+                        Создание аэропорта «Большие Васюки» с регулярным отправлением почтовых самолётов и дирижаблей во все концы света, включая Лос-Анжелос и Мельбурн
+                    </div>
                 </div>
             </div>
-            <div class="midle-content-card">
-                <div class="card-number">
-                    2
-                </div>
-                <div class="card-content">
-                    Открытие фешенебельной гостиницы «Проходная пешка» и других небоскрёбов
-                </div>
-            </div>
-            <div class="midle-content-card">
-                <div class="card-number">
-                    3
-                </div>
-                <div class="card-content">
-                    Поднятие сельского хозяйства в радиусе на тысячу километров: производство овощей, фруктов, икры, шоколадных конфет
-                </div>
-            </div>
-            <div class="midle-content-card">
-                <div class="card-number">
-                    4
-                </div>
-                <div class="card-content">
-                    Строительство дворца для турнира
-                </div>
-            </div>
-            <div class="midle-content-card">
-                <div class="card-number">
-                    5
-                </div>
-                <div class="card-content">
-                    Размещение гаражей для гостевого автотранспорта
-                </div>
-            </div>
-            <div class="midle-content-card">
-                <div class="card-number">
-                    6
-                </div>
-                <div class="card-content">
-                    Постройка сверхмощной радиостанции для передачи всему миру сенсационных результатов
-                </div>
+            <div class="airplane"></div>
+        </div>
+        <div class="bottom-header-container">
+            <div class="bottom-header">Участники турнира</div>
+            <div class="button-container">
+                <button id="leftParticipantCardButton" class="participant-card-button"><img class="left-arrow"src="./images/leftArrow.png" alt="left arrow"></button>
+                <div id="participantСardСounter"></div>
+                <button id="rightParticipantCardButton" class="participant-card-button"><img class="right-arrow" src="./images/rightArrow.png" alt="right arrow"></button>
             </div>
         </div>
+        <div id="slider" class="participant-card-container">
+            <div class="partisipant-card">
+                <div class="participant-image"></div>
+                <div class="participant-name">Хозе-Рауль Капабланка</div>
+                <div class="participant-titul">Чемпион мира по шахматам</div>
+                <button>Подробнее</button>
+            </div>
+            <div class="partisipant-card">
+                <div class="participant-image"></div>
+                <div class="participant-name">Эммануил Ласкер</div>
+                <div class="participant-titul">Чемпион мира по шахматам</div>
+                <button>Подробнее</button>
+            </div>
+            <div class="partisipant-card">
+                <div class="participant-image"></div>
+                <div class="participant-name">Александр Алехин</div>
+                <div class="participant-titul">Арон Нимцович</div>
+                <button>Подробнее</button>
+            </div>
+            <div class="partisipant-card">
+                <div class="participant-image"></div>
+                <div class="participant-name">Рихард Рети</div>
+                <div class="participant-titul">Чемпион мира по шахматам</div>
+                <button>Подробнее</button>
+            </div>
+            <div class="partisipant-card">
+                <div class="participant-image"></div>
+                <div class="participant-name">Арон Нимцович</div>
+                <div class="participant-titul">Чемпион мира по шахматам</div>
+                <button>Подробнее</button>
+            </div>
+            <div class="partisipant-card">
+                <div class="participant-image"></div>
+                <div class="participant-name">Остап Бендер</div>
+                <div class="participant-titul">Гроссмейстер</div>
+                <button>Подробнее</button>
+            </div>
+        </div>
+        <div class="running-line">
+            <span>Дело помощи утопающим — дело рук самих утопающих! &#8226;</span>  Лед тронулся, господа присяжные заседатели! &#8226;
+            <span>Шахматы двигают вперед не только культуру, но и экономику! &#8226;</span>
+            <span>Лед тронулся, господа присяжные заседатели! &#8226;</span>
+        </div>
     </div>
+    <div class="futter">
+        Все персонажи, события и цитаты являются вымышленными и не принадлежат создателям сайта. С подробностями можно познакомиться в главе XXXIV романа Ильи Ильфа и Евгения Петрова «Двенадцать стульев».
+    </div>
+    <script src="index.js"></script>
 </body>
 </html>

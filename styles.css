@@ -1,3 +1,7 @@
+html {
+    scroll-behavior: smooth;
+  }
+
 :root {
     --main-text-color: #1F1F1F; 
     --color-text: #F54932;
@@ -6,7 +10,9 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
+
 .header {
     height: 700px; 
     padding-top: 26px; 
@@ -14,15 +20,18 @@
     background-size: auto 100%;
     padding-left: 72px;
 }
+
 .header-content {
     width: 542px;
 }
+
 .logo {
     background-image: url("./images/logo.png");
     height: 36px;
     width: 245.17px;
     margin-bottom: 62px;
 }
+
 .header-text {
     font-family: "Golos Text", serif;
     font-style: normal;
@@ -31,6 +40,7 @@
     margin-top: 24px;
     margin-bottom: 40px;
 }
+
 .buttons-container {
     display: flex;
     font-size: 16px;
@@ -38,6 +48,7 @@
     font-style: normal;
     text-align: center;
 }
+
 .button {
     width: 542px;
     height: 82px;
@@ -54,25 +65,30 @@
     margin-left: 16px;
     border: none;
 }
+
 .button.left:hover {
     background-color: #FBCE51;
     color: var(--main-text-color);
 }
+
 .button.right:hover {
     background-color: #1F1F1F;
     color: #FFFFFF;
 }
+
 .button.right {
     background: none 0;
     color: var(--main-text-color);
     margin-left: 16px;
     border: 2px solid #1F1F1F;
 }
+
 .content {
     overflow: hidden;
     background-color: #FFFFFF;
     padding: 0 72px 0 72px;
 }
+
 .running-line {
     font-family: "Merriweather", serif;
     font-weight: 400;
@@ -86,6 +102,7 @@
     width: fit-content;
     text-transform: uppercase;
 }
+
 @keyframes running-line {
     0%{
       transform: translate(0, 0);
@@ -94,6 +111,7 @@
       transform: translate(-45%, 0);
     }
   }
+
 .title {
     color: var(--main-text-color);
     font-size: 60px;
@@ -108,6 +126,7 @@
         text-align: end;
     };
 }
+
 .content-header {
     display: flex;
     margin-top: 80px;
@@ -124,9 +143,21 @@
     font-style: normal;
     text-transform: uppercase;
 }
+
+.content-header-text, .schedule {
+    scroll-margin-top: 100px;
+    transition: 1s linear;
+}
+
+.content-header-text:target, .schedule:target {
+    background-color: #FBCE51;
+    border-radius: 5px;
+}
+
 .color-text {
     color: var(--color-text);
 }
+
 .content-header-image {
     width: 394px;
     height: 250px;
@@ -151,9 +182,11 @@ a {
     height: 670.21px;
     background-size: 100% 100%;
 }
+
 .schedule-header {
     margin-bottom: 60px;
 }
+
 .schedule {
     display: flex;
     font-size: 20px;
@@ -163,43 +196,95 @@ a {
     border-spacing: 0;
     margin-bottom: 48px;
 }
+
 .left-column {
     opacity: 0.7;
     font-weight: normal;
 }
+
 td {
     border: 2px solid #D0D0D0;
     border-bottom: none;
     padding-bottom: 16px;
     padding-top: 16px;
 }
+
 .schedule tr:first-child td {
     border-top: none;
     padding-top: 0;
 }
+
 .schedule tr:last-child td {
     padding-bottom: 0;
 }
+
 .schedule td:last-child {
     border-right: none;
     border-left: none;
     padding-left: 16px;
     padding-bottom: 16px;
 }
+
 .schedule td:first-child {
     border-left: none;
     padding-right: 16px;
 }
+
 del {
 	text-decoration-color: #F54932;
     margin-right: 14.5px;
 }
 
 .midle-content {
+    position: relative;
     display: grid;
     gap: 20px;
-    grid-template-columns: auto auto auto;
     margin-bottom: 200px;
+    grid-template-areas:
+    "A  B  C"
+    "D  E  C"
+    "F  G  G";
+}
+
+.box-1 {
+    grid-area: A;
+}
+
+.box-2 {
+    grid-area: B;
+}
+
+.box-3 {
+    grid-area: C;
+}
+
+.box-4 {
+    grid-area: D;
+}
+
+.box-5 {
+    grid-area: E;
+}
+
+.box-6 {
+    grid-area: F;
+}
+
+.box-7 {
+    grid-area: G;
+}
+
+.midle-content-container {
+    position: relative;
+}
+
+.midle-content-container .airplane {
+    background-image: url("./images/airplane.png");
+    width: 379px;
+    height: 207px;
+    position: absolute;
+    bottom: 27px;
+    right: -33px;
 }
 
 .midle-content-title {
@@ -209,6 +294,7 @@ del {
     font-family: "Merriweather", serif;
     font-weight: 400;
     text-transform: uppercase;
+    margin-bottom: 54px;
 }
 
 .midle-content-title .littel-text {
@@ -219,6 +305,7 @@ del {
     align-content: center;
     margin-left: 10px;
 }
+
 .midle-content-title .second-row {
     display: flex;
 }
@@ -228,6 +315,20 @@ del {
     padding: 20px;
     display: flex;
 }
+
+.midle-content .card-content {
+    width: 302px;
+    color: var(--main-text-color);
+    font-size: 20px;
+    line-height: 120%;
+    font-family: "Golos Text", serif;
+    font-weight: 400;
+}
+
+.box-7 .card-content {
+    width: 446px;
+ }
+
 .midle-content .card-number {
     background-color: #FFFFFF;
     width: 36px;
@@ -237,6 +338,115 @@ del {
     align-items: center;
     justify-content: center;
     margin-right: 16px;
+}
+
+.bottom-header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: var(--main-text-color);
+    font-size: 54px;
+    line-height: 135%;
+    font-family: "Merriweather", serif;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+.bottom-header-container  .button-container{
+    display: flex;
+    height: 44px;
+}
+
+.participant-card-button {
+    width: 44px;
+    height: 44px;
+    background-color: #313131;
+    border-radius: 22px;
+    color: #FFFFFF;
+    font-size: 16px;
+    border: none;
+}
+
+.participant-card-button .disabled{
+   background-color: #D6D6D6;
+}
+
+.participant-card-button:hover { 
+    background-color: #FBCE51;
+}
+
+.participantСardСounter {
+    margin: 0 14px;
+}
+
+.participant-card-button .left-arrow {
+    margin-right: 4px;
+    margin-top: 4px;
+}
+
+.participant-card-button .right-arrow {
+    margin-left: 4px;
+    margin-top: 4px;
+}
+
+.participant-card-container {
+    margin-top: 60px;
+    margin-bottom: 140px;
+    display: flex;
+    gap: 20px;
+    overflow: hidden;
+}
+
+.participant-image {
+    width: 320px;
+    height: 320px;
+    background-image: url("./images/chessPlayer2.png");
+}
+
+.partisipant-card button {
+    border: 1px solid #3057A2;
+    background-color: #FFFFFF;
+    border-radius: 62px;
+    padding: 12px;
+    font-size: 16px;
+    color: #3057A2;
+}
+
+.partisipant-card button:hover {
+   background-color: #3057A2;
+   border: none;
+   color: #FFFFFF;
+}
+
+.partisipant-card {
+    padding: 0 37px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: "Golos Text", serif;
+    line-height: 120%;
+}
+
+.participant-name {
+    font-size: 24px;
+    font-weight: 600;
+    color: var(--main-text-color);
+    margin-top: 28px;
+}
+
+.participant-titul {
+    font-size: 20px;
+    opacity: 0.6;
+    color: var(--main-text-color);
+    margin: 6px 0 20px 0;
+}
+
+.futter {
+    background-color: #E9DED4;
+    font-family: "Golos Text", serif;
+    line-height: 120%;
+    font-size: 16px;
+    padding: 40px 72px 72px;
 }
 
 @media (min-width: 1920px) {
