@@ -83,6 +83,11 @@ html {
     border: 2px solid #1F1F1F;
 }
 
+.button.right div {
+    width: 82px;
+    display: inline-block;
+}
+
 .content {
     overflow: hidden;
     background-color: #FFFFFF;
@@ -135,9 +140,10 @@ html {
     margin-top: 80px;
     justify-content: space-between;
     align-items: center;
+    width: 100%;
 }
 
-.content-header-text, .schedule-header {
+.content-header, .schedule-header {
     color: var(--main-text-color);
     font-size: 36px;
     line-height: 135%;
@@ -150,11 +156,6 @@ html {
 .content-header-text, .schedule {
     scroll-margin-top: 100px;
     transition: 1s linear;
-}
-
-.content-header-text:target, .schedule:target {
-    background-color: #FBCE51;
-    border-radius: 5px;
 }
 
 .color-text {
@@ -200,7 +201,7 @@ a {
     margin-bottom: 48px;
 }
 
-.left-column {
+.nomination {
     opacity: 0.7;
     font-weight: normal;
 }
@@ -307,6 +308,7 @@ del {
     line-height: normal;
     align-content: center;
     margin-left: 10px;
+    text-transform: math-auto;
 }
 
 .midle-content-title .second-row {
@@ -356,13 +358,13 @@ del {
     width: 100%;
 }
 
-.bottom-header-container  .button-container{
+.button-container{
     display: flex;
     height: 44px;
     align-items: center;
 }
 
-.participant-card-button {
+.slider-button {
     width: 44px;
     height: 44px;
     background-color: #313131;
@@ -372,12 +374,12 @@ del {
     border: none;
 }
 
-.participant-card-button.disabled{
+.slider-button.disabled{
    background-color: #D6D6D6;
 
 }
 
-.participant-card-button:hover { 
+.slider-button:hover { 
     background-color: #FBCE51;
 }
 .participant-card-counter {
@@ -391,12 +393,12 @@ del {
     opacity: 0.6;
 }
 
-.participant-card-button .left-arrow {
+.slider-button .left-arrow {
     margin-right: 4px;
     margin-top: 4px;
 }
 
-.participant-card-button .right-arrow {
+.slider-button .right-arrow {
     margin-left: 4px;
     margin-top: 4px;
 }
@@ -442,6 +444,11 @@ del {
     line-height: 120%;
 }
 
+.partisipant-card button {
+    height: 35px;
+    padding: 8px 12px;
+}
+
 .participant-name {
     font-size: 24px;
     font-weight: 600;
@@ -464,8 +471,219 @@ del {
     padding: 40px 72px 72px;
 }
 
+.mobile {
+    display: none;
+}
+
 @media (min-width: 1920px) {
     .header {
         padding-left: 348.5px;
+    }
+}
+
+@media (max-width: 375px) {
+
+    .desctop, .mobile-schedule-table {
+        display: none;
+    }
+
+    .content {
+      padding: 0 20px;
+    }
+
+    .content-header.mobile {
+        display: flex;
+        font-size: 28px;
+        width: 335px;
+        overflow: hidden;
+    }
+
+    .content-header-image {
+        margin: 24px 0;
+        background-size: 85% 100%;
+        height: 212.56px;
+        background-repeat: no-repeat;
+    }
+
+    .header {
+        padding: 18px 18px 0;
+        background-image: url(./images/screen375.jpg);
+        background-size: 100% 100%;
+        height: 812px;
+    }
+
+    .logo {
+        margin-bottom: 40px;
+        background-size: contain;
+        width: 213px;
+        height: 32px;
+    }
+
+    .title {
+        font-size: 36px;
+        width: 335px;
+    }
+
+    .header-text {
+        width: 335px;
+        text-align: start;
+    }
+    .header-content {
+        width: 335px;
+    }
+
+    .buttons-container {
+        flex-direction: column;
+    }
+
+    .buttons-container .button {
+        height: 47px;
+        width: 335px;
+        padding: 13px 43px;
+        margin: 0;
+    }
+
+    .buttons-container .button.left {
+        margin-bottom: 14px;
+    }
+    .buttons-container .button.right {
+        border: none;
+        background-color: #FFFFFF;
+    }
+    .button.right div {
+        width: auto;
+    }
+
+    .running-line {
+        font-size: 16px;
+        height: 38px;
+        padding: 10px;
+    }
+    .schedule-content {
+       flex-direction: column;
+       margin-bottom: 120px;
+    }
+    .schedule-content-image {
+        height: 402px;
+        width: 375px;
+    }
+    .schedule-content-text {
+        padding: 0 20px;
+    }
+
+    .schedule-content-text a {
+        font-size: 18px;
+    }
+    .schedule-header {
+        font-size: 28px;
+        margin-bottom: 28px;
+    }
+    .mobile-schedule-table {
+        display: block;
+        margin-bottom: 40px;
+        font-size: 20px;
+        font-family: "Golos Text", serif;
+    }
+
+    .mobile-schedule-table .string {
+       border-bottom: 2px solid #D0D0D0;
+       padding: 16px 0;
+    }
+
+    .string:last-child {
+        border: none;
+        padding-bottom: 0;
+    }
+
+    .midle-content-container {
+        width: 335px;
+    }
+
+    .midle-content-title .second-row {
+       display: block;
+    }
+
+    .midle-content-title .littel-text {
+        margin: 0;
+        font-size: 18px;
+    }
+
+    .nomination {
+        margin-bottom: 12px;
+    }
+
+    .midle-content {
+        grid-template-areas:
+        "A  C  D  E  G"
+        "B  C  D  F  G";
+        gap: 0;
+        margin: 0;
+    }
+
+    .midle-content-container .button-container {
+        margin-bottom: 120px;
+        margin-top: 28px;
+        justify-content: center;
+    }
+
+    .midle-content-container .button-container .counter {
+        padding: 0 16px;
+    }
+
+    .midle-content-title {
+        font-size: 36px;
+        line-height: 110%;
+        margin-bottom: 148px;
+    }
+
+    .midle-content-container .airplane {
+        width: 335px;
+        height: 182px;
+        background-size: cover;
+        bottom: 407px;
+    }
+
+    .bottom-header {
+        width: 36px;
+    }
+
+    .bottom-header-container {
+        font-size: 36px;
+    }
+
+    .button-container.mobile {
+        display: flex;
+        margin-bottom: 100px;
+    }
+
+    .participant-image {
+        width: 244px;
+        height: 244px;
+        background-size: contain;
+    }
+
+    .carusel-container {
+        padding: 40px 0;
+        width: 335px;
+    }
+
+    .futter {
+        height: 214px;font-size: 16px;
+        padding: 40px 20px 60px;
+    }
+    .futter .text {
+        opacity: 0.6;
+    }
+
+    .participant-name {
+        font-size: 24px;
+        white-space: nowrap;
+    }
+    .participant-titul {
+        font-size: 20px;
+    }
+
+    .partisipant-card {
+        width: 335px;
     }
 }

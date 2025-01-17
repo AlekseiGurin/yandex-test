@@ -26,7 +26,7 @@
             <div class="header-text">Оплатите взнос на телеграммы для организации Международного васюкинского турнира по шахматам</div>
             <div class="buttons-container">
                 <a href="#supportTheChessIdea" class="button left">Поддержать шахматную мысль</a>
-                <a href="#moreAboutTheTournament" class="button right">Подробнее <br>о турнире</a>
+                <a href="#moreAboutTheTournament" class="button right"><div>Подробнее о турнире</div></a>
             </div>
         </div>
     </div>
@@ -36,11 +36,19 @@
             <span>Шахматы двигают вперед не только культуру, но и экономику! &#8226;</span>
             <span>Лед тронулся, господа присяжные заседатели! &#8226;</span>
         </div>
-        <div class="content-header">
+        <div class="content-header desctop">
             <div id="supportTheChessIdea" class="content-header-text">
                 Чтобы поддержать<br>Международный васюкинский<br>турнир посетите лекцию на тему:<br><span class="color-text">«Плодотворная дебютная идея»</span>
             </div>
             <div class="content-header-image"></div>
+        </div>
+        <div class="content-header mobile">
+            <div id="supportTheChessIdea" class="content-header-text">
+                <span>Чтобы поддержать Международный васюкинский<br> турнир</span>
+                <div class="content-header-image"></div>
+                <span>посетите лекцию на тему:</span>
+                 <span class="color-text">«Плодотворная дебютная идея»</span>
+            </div>
         </div>
         <div class="schedule-content">
           <div class="schedule-content-image"></div>
@@ -48,28 +56,50 @@
             <div class="schedule-header">
                 И Сеанс <span class="color-text">одновременной игры<br> в шахматы на 160 досках</span><br> гроссмейстера О. Бендера
             </div>
-            <table id="moreAboutTheTournament" class="schedule">
+            <table id="moreAboutTheTournament" class="schedule desctop">
                 <tr>
-                    <td class="left-column">Место проведения:</td>
+                    <td class="nomination">Место проведения:</td>
                     <td>Клуб «Картонажник»</td>
                 </tr>
                 <tr>
-                    <td class="left-column">Дата и время мероприятия:</td>
+                    <td class="nomination">Дата и время мероприятия:</td>
                     <td>22 июня 1927 г. в 18:00</td>
                 </tr>
                 <tr>
-                    <td class="left-column">Стоимость входных билетов:</td>
+                    <td class="nomination">Стоимость входных билетов:</td>
                     <td>20 коп.</td>
                 </tr>
                 <tr>
-                    <td class="left-column">Плата за игру:</td>
+                    <td class="nomination">Плата за игру:</td>
                     <td>50 коп.</td>
                 </tr>
                 <tr>
-                    <td class="left-column">Взнос на телеграммы:</td>
+                    <td class="nomination">Взнос на телеграммы:</td>
                     <td><del>100 руб</del> 21 руб. 16 коп</td>
                 </tr>
             </table>
+            <div class="mobile-schedule-table">
+                  <div class="string">
+                    <div class="nomination">Место проведения:</div>
+                    <div>Клуб «Картонажник»</div>
+                  </div>
+                  <div class="string">
+                    <div class="nomination">Дата и время мероприятия:</div>
+                    <div>22 июня 1927 г. в 18:00</div>
+                  </div>
+                  <div class="string">
+                    <div class="nomination">Стоимость входных билетов:</div>
+                    <div>20 коп.</div>
+                  </div>
+                  <div class="string">
+                    <span class="nomination">Плата за игру:</span>
+                    <span>50 коп.</span>
+                  </div>
+                  <div class="string">
+                    <div class="nomination">Взнос на телеграммы:</div>
+                    <div><del>100 руб</del> 21 руб. 16 коп</div>
+                  </div>
+            </div>  
             <a href="">По всем вопросам обращаться в администрацию к К. Михельсону</a>
           </div>
         </div>
@@ -137,13 +167,18 @@
                 </div>
             </div>
             <div class="airplane"></div>
+            <div class="button-container mobile">
+                <button id="leftSlideButton" class="slider-button"><img class="left-arrow"src="./images/leftArrow.png" alt="left arrow"></button>
+                <div class="counter"><span class="current-card"></span></div>
+                <button id="rightSliderButton" class="slider-button"><img class="right-arrow" src="./images/rightArrow.png" alt="right arrow"></button>
+            </div>
         </div>
         <div class="bottom-header-container">
             <div class="bottom-header">Участники турнира</div>
-            <div class="button-container">
-                <button id="leftParticipantCardButton" class="participant-card-button"><img class="left-arrow"src="./images/leftArrow.png" alt="left arrow"></button>
+            <div class="button-container desctop">
+                <button id="leftParticipantCardButton" class="slider-button"><img class="left-arrow"src="./images/leftArrow.png" alt="left arrow"></button>
                 <div class="participant-card-counter"><span class="displayed-card"></span><span class="total-participant-card"></span></div>
-                <button id="rightParticipantCardButton" class="participant-card-button"><img class="right-arrow" src="./images/rightArrow.png" alt="right arrow"></button>
+                <button id="rightParticipantCardButton" class="slider-button"><img class="right-arrow" src="./images/rightArrow.png" alt="right arrow"></button>
             </div>
         </div>
         <div  class="carusel-container">
@@ -168,13 +203,13 @@
                 </div>
                 <div class="partisipant-card">
                     <div class="participant-image"></div>
-                    <div class="participant-name">Рихард Рети</div>
+                    <div class="participant-name">Арон Нимцович</div>
                     <div class="participant-titul">Чемпион мира по шахматам</div>
                     <button>Подробнее</button>
                 </div>
                 <div class="partisipant-card">
                     <div class="participant-image"></div>
-                    <div class="participant-name">Арон Нимцович</div>
+                    <div class="participant-name">Рихард Рети</div>
                     <div class="participant-titul">Чемпион мира по шахматам</div>
                     <button>Подробнее</button>
                 </div>
@@ -186,6 +221,11 @@
                 </div>
             </div>
         </div>
+        <div class="button-container mobile">
+            <button id="leftMobileButton" class="slider-button"><img class="left-arrow"src="./images/leftArrow.png" alt="left arrow"></button>
+            <div class="participant-card-counter"><span class="displayed-mobile-card"></span><span class="total-participant-card-mobile"></span></div>
+            <button id="rightMobileButton" class="slider-button"><img class="right-arrow" src="./images/rightArrow.png" alt="right arrow"></button>
+        </div>
         <div class="running-line">
             <span>Дело помощи утопающим — дело рук самих утопающих! &#8226;</span>  Лед тронулся, господа присяжные заседатели! &#8226;
             <span>Шахматы двигают вперед не только культуру, но и экономику! &#8226;</span>
@@ -193,7 +233,7 @@
         </div>
     </div>
     <div class="futter">
-        Все персонажи, события и цитаты являются вымышленными и не принадлежат создателям сайта. С подробностями можно познакомиться в главе XXXIV романа Ильи Ильфа и Евгения Петрова «Двенадцать стульев».
+        <span class="text">Все персонажи, события и цитаты являются вымышленными и не принадлежат создателям сайта. С подробностями можно познакомиться в главе XXXIV романа Ильи Ильфа и Евгения Петрова «Двенадцать стульев».</span>
     </div>
     <script src="index.js"></script>
 </body>
