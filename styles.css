@@ -712,11 +712,30 @@ del {
         font-size: 18px;
         font-family: "Golos Text", serif;
     }
+
     .card .card-content {
         display: flex;
         align-items: flex-start;
     }
+
     .card-content .text-content {
         width: 239px;
+    }
+
+    .counter-elipse {
+        width: 10px;
+        height: 10px;
+        background-color: #D9D9D9;
+        border-radius: 50%;
+    }
+
+    .card-counter .counter-elipse.current {
+        background-color: #313131;
+    }
+
+    .card-counter {
+        display: flex;
+        gap: 6px;
+       padding: 0 16px;
     }
 }
