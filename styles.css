@@ -17,12 +17,17 @@ html {
     height: 700px; 
     padding-top: 26px; 
     background-image: url("./images/1920.jpg");
-    background-size: auto 100%;
-    padding-left: 72px;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
 }
 
 .carousel-midle-content {
     display: none;
+}
+
+.header-content-container { 
+    width: 1222px;
 }
 
 .header-content {
@@ -149,6 +154,7 @@ html {
     justify-content: space-between;
     align-items: center;
     width: 100%;
+    max-width: 1222px;
 }
 
 .content-header, .schedule-header {
@@ -364,6 +370,7 @@ del {
     font-weight: 400;
     text-transform: uppercase;
     width: 100%;
+    max-width: 1222px;
 }
 
 .button-container{
@@ -483,16 +490,21 @@ del {
     display: none;
 }
 
-@media (min-width: 1920px) {
+@media (min-width: 1366px) and (max-width: 1600px) {
     .header {
-        padding-left: 348.5px;
+        background-size: auto 100%;
+        background-image: url("./images/1360.jpg");
     }
 }
 
-@media (max-width: 375px) {
+@media (min-width: 375px) and (max-width: 768px) {
 
     .desctop, .mobile-schedule-table {
         display: none;
+    }
+
+    .header-content-container {
+        width: 335px;
     }
 
     .content {
@@ -511,13 +523,6 @@ del {
         background-size: 85% 100%;
         height: 212.56px;
         background-repeat: no-repeat;
-    }
-
-    .header {
-        padding: 18px 18px 0;
-        background-image: url(./images/screen375.jpg);
-        background-size: 100% 100%;
-        height: 774px;
     }
 
     .logo {
@@ -582,6 +587,7 @@ del {
           transform: translate(-120%, 0);
         }
       }
+
     .schedule-content {
        flex-direction: column;
        margin-bottom: 120px;
@@ -761,5 +767,24 @@ del {
         display: flex;
         gap: 6px;
        padding: 0 16px;
+    }
+
+    @media (min-width: 375px) and (max-width: 450px) { 
+        .header {
+            padding: 18px 18px 0;
+            background-image: url(./images/screen375.jpg);
+            height: 774px;
+            background-size: cover;
+            background-repeat: round;
+        }
+    }
+
+    @media (min-width: 450px) and (max-width: 1360px) { 
+        .header {
+            background-image: url(./images/1360.jpg);
+            background-size: 246% 100%;
+            height: 774px;
+            background-position-x: 57%;
+        }
     }
 }
