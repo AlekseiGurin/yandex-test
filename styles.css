@@ -21,6 +21,10 @@ html {
     padding-left: 72px;
 }
 
+.carousel-midle-content {
+    display: none;
+}
+
 .header-content {
     width: 542px;
 }
@@ -96,8 +100,7 @@ html {
     flex-direction: column;
     align-items: center;
 }
-
-.running-line {
+.running-line-container {
     font-family: "Merriweather", serif;
     font-weight: 400;
     font-style: normal;
@@ -105,18 +108,23 @@ html {
     background-color: #F54932;
     color: #FFFFFF;
     padding: 18px 12px;
-    animation: running-line 4s infinite linear;
     white-space: nowrap;
     width: fit-content;
     text-transform: uppercase;
+    padding-left: 240%;
 }
+
+.running-line {
+    animation: running-line 20s infinite linear;
+}
+
 
 @keyframes running-line {
     0%{
       transform: translate(0, 0);
     }
     100%{
-      transform: translate(-45%, 0);
+      transform: translate(-190%, 0);
     }
   }
 
@@ -509,7 +517,7 @@ del {
         padding: 18px 18px 0;
         background-image: url(./images/screen375.jpg);
         background-size: 100% 100%;
-        height: 812px;
+        height: 774px;
     }
 
     .logo {
@@ -527,6 +535,7 @@ del {
     .header-text {
         width: 335px;
         text-align: start;
+        margin-bottom: 32px;
     }
     .header-content {
         width: 335px;
@@ -554,11 +563,25 @@ del {
         width: auto;
     }
 
+    .running-line-container {
+        height: 38px;
+        padding: 10px 0;
+    }
+
     .running-line {
         font-size: 16px;
-        height: 38px;
-        padding: 10px;
+        padding-left: 60%;
+        animation: running-line 20s infinite linear;
     }
+    
+    @keyframes running-line {
+        0%{
+          transform: translate(0, 0);
+        }
+        100%{
+          transform: translate(-120%, 0);
+        }
+      }
     .schedule-content {
        flex-direction: column;
        margin-bottom: 120px;
@@ -693,6 +716,7 @@ del {
 
     .carousel-midle-content {
         overflow: hidden;
+        display: block;
     }
 
     .carousel-midle-content .slider {

@@ -33,7 +33,7 @@ window.addEventListener('load', () => {
             leftButtonIsDisabled = true;
             leftButton.classList.add('disabled');
          }
-         if(counter === 4) {
+         if(counter === 4 || isDesctop) {
             rightButton.classList = 'slider-button';
          }
          slider.style.transform = 'translateX(' + `${-step * counter}px)`;
@@ -57,9 +57,11 @@ window.addEventListener('load', () => {
          };
          slider.style.transform = 'translateX(' + `${-step * counter}px)`;
       } 
-   }
+   };
+
    rightButton.addEventListener('click', moveParticipantCardsToTheRight);
    leftButton.addEventListener('click', moveParticipantCardsToTheLeft);
+
    setInterval(() => {
      if (leftButtonIsDisabled || !isDesctop) {
         if (counter === 5) {
@@ -76,6 +78,7 @@ window.addEventListener('load', () => {
         moveParticipantCardsToTheLeft();
      }
    }, 4000);
+
    const sliderMidleСontent = document.querySelector('.slider');
    const leftMidleButton = document.getElementById('leftSliderButton');
    const rightMidleButton = document.getElementById('rightSliderButton');
